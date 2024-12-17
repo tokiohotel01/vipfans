@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIP Fans App</title>
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Estilos personalizados -->
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Encabezado */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    }
+
+    .nav-icons i {
+      font-size: 1.5rem;
+      color: #ff00ff;
+      text-shadow: 0 0 5px #ff00ff;
+    }
+
+    /* Botones */
+    .buttons-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 1rem;
+      padding: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .neon-btn {
+      text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff;
+      border: 2px solid #00f7ff;
+      border-radius: 20px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    /* Swiper Slider */
+    .swiper-container {
+      width: 100%;
+      height: 250px;
+      margin: 20px auto;
+    }
+
+    .swiper-slide {
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ff00ff;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    /* Tarjetas */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px #ff00ff;
+    }
+
+    .card img {
+      width: 100%;
+      border-bottom: 2px solid #ff00ff;
+    }
+
+    .card p {
+      padding: 10px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    /* Footer */
+    footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .footer-icons i {
+      font-size: 1.5rem;
+      color: #ff00ff;
+      text-shadow: 0 0 5px #ff00ff;
+    }
+
+    /* Media Queries */
+    @media (min-width: 600px) {
+      .container {
+        max-width: 600px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 900px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1 class="title">VIP Fans</h1>
+    <div class="nav-icons">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-heart"></i>
+    </div>
+  </header>
+
+  <!-- Botones -->
+  <section class="buttons-section">
+    <button class="btn neon-btn">Exclusive</button>
+    <button class="btn neon-btn">Videos</button>
+    <button class="btn neon-btn">Live</button>
+  </section>
+
+  <!-- Swiper Slider -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="imagen1.jpg" alt="Slide 1"></div>
+      <div class="swiper-slide"><img src="imagen2.jpg" alt="Slide 2"></div>
+      <div class="swiper-slide"><img src="imagen3.jpg" alt="Slide 3"></div>
+    </div>
+    <!-- Flechas y Paginación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Tarjetas -->
+  <section class="cards">
+    <div class="card" data-aos="fade-up">
+      <img src="imagen1.jpg" alt="Imagen 1">
+      <p>Contenido 1</p>
+    </div>
+    <div class="card" data-aos="fade-left">
+      <img src="imagen2.jpg" alt="Imagen 2">
+      <p>Contenido 2</p>
+    </div>
+    <div class="card" data-aos="fade-right">
+      <img src="imagen3.jpg" alt="Imagen 3">
+      <p>Contenido 3</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-icons">
+      <i class="fa fa-comment"></i>
+      <i class="fa fa-video-camera"></i>
+      <i class="fa fa-heart"></i>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- FontAwesome para íconos -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+    });
+  </script>
+</body>
+</html>

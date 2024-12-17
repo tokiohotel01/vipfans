@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Encabezado */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+  
+  .nav-icons i {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+  }
+  
+  /* Botones */
+  .buttons-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .neon-btn {
+    text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff;
+    border: 2px solid #00f7ff;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Tarjetas */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    position: relative;
+    background: #222;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px #ff00ff;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    border-bottom: 2px solid #ff00ff;
+  }
+  
+  .card p {
+    padding: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .footer-icons i {
+    font-size: 1.5rem;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+  }
+  
+  /* Media Queries para Responsividad */
+  
+  /* Para dispositivos más grandes (tabletas y pequeñas pantallas) */
+  @media (min-width: 600px) {
+    .container {
+      max-width: 600px;
+    }
+  
+    .buttons-section {
+      justify-content: space-between;
+    }
+  
+    .cards {
+      grid-template-columns: 1fr 1fr; /* Dos columnas */
+    }
+  }
+  
+  /* Para pantallas grandes (escritorio) */
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 900px;
+    }
+  
+    .cards {
+      grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    }
+  
+    .title {
+      font-size: 2.5rem;
+    }
+  }
+  
